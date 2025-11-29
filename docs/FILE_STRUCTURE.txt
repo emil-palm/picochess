@@ -1,0 +1,80 @@
+PicoChess Documentation Structure
+==================================
+
+docs/
+│
+├── README.md ................................ Main index & navigation guide
+├── quick-reference.md ....................... Fast lookup tables & patterns
+│
+├── architecture/ ............................ System design & patterns
+│   ├── event-system.md ..................... Event queues & threading (DETAILED)
+│   └── message-flow.md ..................... Complete flow diagrams (DETAILED)
+│
+├── features/ ................................ Core game logic (11 features)
+│   ├── 01-board-position.md ................ FEN validation & sliding (DETAILED)
+│   ├── 02-engine-uci.md .................... UCI engine management
+│   ├── 03-time-control.md .................. Fixed/Blitz/Fischer clocks
+│   ├── 04-opening-books.md ................. Polyglot book integration
+│   ├── 05-interaction-modes.md ............. 7 game modes (Normal/Brain/etc)
+│   ├── 06-pgn-recording.md ................. Game history & email
+│   ├── 07-voice-announcements.md ........... Audio move announcements
+│   ├── 08-menu-system.md ................... Configuration interface
+│   ├── 09-alternative-moves.md ............. Request different suggestions
+│   ├── 10-analysis-info.md ................. PV/Score/Depth display
+│   └── 11-internationalization.md .......... Multi-language support
+│
+├── input/ ................................... How user interacts (4 devices)
+│   ├── dgt-board.md ........................ Electronic board → FEN positions
+│   ├── dgt-buttons.md ...................... Clock buttons → menu navigation
+│   ├── web-interface-input.md .............. Browser → moves & commands
+│   └── console-input.md .................... CLI → test commands
+│
+├── output/ .................................. How system displays (6 devices)
+│   ├── dgt-xl-clock.md ..................... 6-char serial display
+│   ├── dgt-3000-clock.md ................... 8-char serial display
+│   ├── dgt-pi-clock.md ..................... 11-char i2c display
+│   ├── revelation-ii.md .................... 11-char display + 64 LEDs
+│   ├── web-interface-output.md ............. Browser graphical display
+│   └── voice-output.md ..................... Audio announcements (.ogg)
+│
+└── integration/ ............................. Implementation planning
+    ├── dependencies.md ..................... Feature dependency graph
+    └── implementation-order.md ............. 4-week phased build plan
+
+
+LEGEND:
+-------
+(DETAILED) = Full implementation examples included
+(stub)     = Overview only, see PICOCHESS_FEATURES_ANALYSIS.md for details
+
+
+TOTAL FILES: 27 markdown files
+- Architecture: 2 files (both detailed)
+- Features: 11 files (1 detailed + 10 stubs)
+- Input: 4 files (all stubs)
+- Output: 6 files (all stubs)
+- Integration: 2 files (both stubs)
+- Reference: 2 files (README + quick-ref, both detailed)
+
+
+RECOMMENDED READING ORDER:
+--------------------------
+1. docs/README.md ........................... Start here!
+2. docs/quick-reference.md .................. Get oriented
+3. architecture/event-system.md ............. Understand foundation
+4. architecture/message-flow.md ............. See complete examples
+5. features/01-board-position.md ............ First feature implementation
+6. integration/implementation-order.md ...... Follow build plan
+7. Individual feature/device files as needed
+
+
+HARDWARE SUPPORT:
+-----------------
+Input:  DGT Board, DGT Buttons, Web, Console
+Output: DGT XL (6ch), 3000 (8ch), Pi (11ch), RevII (11ch+LED), Web, Voice
+
+
+ORIGINAL FILES (still available):
+----------------------------------
+../PICOCHESS_FEATURES_ANALYSIS.md ... Complete detailed implementation guide
+../DOCUMENTATION_SUMMARY.md ......... This structure explained
