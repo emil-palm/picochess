@@ -31,6 +31,7 @@ Game logic and chess engine features:
 ### 📥 Input Devices
 How the system receives input:
 - [DGT Electronic Board](input/dgt-board.md) - Position sensing via FEN
+- [DGT Clock Time](input/dgt-clock-time.md) - Time synchronization (external clock as source of truth)
 - [DGT Clock Buttons](input/dgt-buttons.md) - 5 button navigation
 - [Web Interface Input](input/web-interface-input.md) - Browser-based control
 - [Console Input](input/console-input.md) - Command-line interface
